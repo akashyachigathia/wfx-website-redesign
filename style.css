@@ -128,6 +128,37 @@ p {
   cursor: pointer;
 }
 
+.orbit-one {
+    width: 480px;
+    height: 480px;
+    left: -180px;
+    top: 30px;
+    background: radial-gradient(circle, rgba(8, 184, 200, .25), transparent 66%);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+    padding: 94px 0 80px;
+    background: linear-gradient(110deg, #e9f8f6 0%, #f8faf5 52%, #fff2df 100%);
+}
+
+.hero-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.orbit-two {
+    width: 520px;
+    height: 520px;
+    right: -190px;
+    top: 300px;
+    background: radial-gradient(circle, rgba(246, 165, 61, .24), transparent 68%);
+}
+
 .shell-herosection {
   display: flex;
   align-items: center;
@@ -213,23 +244,36 @@ p {
 }
 
 #slider1 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 20px;
+
   overflow: hidden;
-  padding: 32px 32px;
-  margin-top: 5rem;
-  border: 1px solid black;
+  
 }
 
 #slider1 .trusted-heading {
-  text-align: center;
-  margin: 0 0 45px;
-  padding: 0 20px;
-  font-family: Switzer_Regular;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-top: 0.5rem;
-  color: var(--color-P);
+  flex: 0 0 240px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #172238;
+   font-family: Switzer_Regular;
 }
+
+#slider1 .logo-window {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
 
 #slider1 .logo-track {
   display: flex;
