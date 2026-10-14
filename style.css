@@ -380,6 +380,7 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .platform_card_section p {
@@ -394,9 +395,9 @@ p {
   margin-top: 1rem;
   font-size: clamp(2.8rem, 5vw, 5rem);
   line-height: 1.02;
-    color: #20263b;
+  color: #20263b;
   text-align: center;
-      font-size: clamp(36px, 4vw, 64px);
+  font-size: clamp(36px, 4vw, 64px);
 }
 
 .platform_card_section p:last-child {
@@ -406,14 +407,125 @@ p {
   max-width: 750px;
   text-align: center;
   line-height: 1.6;
-  margin-top: 1.2rem;
+  margin: 1.2rem 0 4rem 0;
   color: var(--color-P);
+
+}
+
+.capability-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.capability {
+  min-height: 500px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.capability-grid .capability:nth-child(1) {
+  background-color: #dff7f4; /* Mint */
+}
+
+.capability-grid .capability:nth-child(2) {
+  background-color: #eee8fa; /* Lavender */
+}
+
+.capability-grid .capability:nth-child(3) {
+  background-color: #fff0dc; /* Peach */
+}
+
+.capability-grid .capability:nth-child(4) {
+  background-color: #e3efff; /* Light blue */
 }
 
 
-.Core{
-  background-color: #F4F8F7;
+.capability img {
+  display: block;
+  width: 100%;
+  height: 245px;
+  max-height: none;
+  object-fit: cover;
+  object-position: top center;
+  flex-shrink: 0;
+  /* mix-blend-mode: multiply; */
+}
+.card-copy p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.card-copy h3 {
+  font-size: 1.5rem;
+    font-family: Switzer_Regular;
+}
+
+.card-copy span {
+  font-size: 1rem;
+    font-family: Switzer_Regular;
+}
+
+.card-copy a {
+  font-size: 1rem;
+  font-family: Switzer_semibold;
+  text-decoration: none;
+  position: relative;
+  width: fit-content;
+}
+
+.card-copy a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.card-copy a:hover::after,
+.card-copy a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.card-copy {
+  padding: 28px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.card-copy p,
+.card-copy h3 {
+  margin: 0;
+}
+
+.card-copy span {
+  line-height: 1.6;
+}
+
+.card-copy a {
+  margin-top: auto;
+}
+
+.Core {
+  background-color: #f4f8f7;
   padding: 5rem 0 2rem 0;
+}
+
+
+/* --------------------------------card section capability-grid */
+@media (max-width: 767px) {
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes scroll-logos {
