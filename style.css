@@ -707,3 +707,35 @@ margin: 3rem 0 3rem 0 ;
   }
 }
 
+
+/* DESIGN NOTES — additions only; keep these at the end of style.css. */
+.dn-toolbar[hidden], .dn-marker-row[hidden] { display: none !important; }
+.dn-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; padding:14px 20px; background:#20263b; color:white; font:14px/1.5 Switzer_Regular, sans-serif; }
+.dn-toolbar button, .dn-marker, #dn-close { cursor:pointer; font:inherit; border-radius:24px; padding:10px 16px; min-height:44px; }
+.dn-toolbar button { color:white; background:transparent; border:1px solid #a6b5c9; }
+.dn-toolbar button[aria-pressed="true"] { background:#dff7f4; color:#20263b; border-color:#dff7f4; }
+.dn-marker-row { width:100%; display:flex; justify-content:center; padding:12px 16px; }
+.dn-marker { display:inline-flex; align-items:center; gap:8px; border:1px solid #007b87; background:#fff; color:#006773; box-shadow:0 4px 14px #17223812; font:14px/1.4 Switzer_Regular,sans-serif; }
+.dn-marker span { font-weight:700; }
+.dn-marker:hover { background:#dff7f4; }
+.dn-toolbar button:focus-visible, .dn-marker:focus-visible, #dn-close:focus-visible { outline:3px solid #f6a53d; outline-offset:4px; }
+#dn-dialog { margin:auto; width:calc(100% - 32px); max-width:840px; max-height:85vh; max-height:85dvh; padding:0; border:1px solid #d6e0e4; border-radius:20px; background:white; color:#20263b; box-shadow:0 24px 90px #0004; overflow:auto; overscroll-behavior:contain; font:16px/1.65 Switzer_Regular,Arial,sans-serif; }
+#dn-dialog::backdrop { background:rgba(16,24,40,.65); }
+.dn-dialog-inner { padding:28px; }
+#dn-close { display:block; margin-left:auto; border:1px solid #c5d1da; background:#f4f8f7; color:#20263b; }
+#dn-dialog .dn-eyebrow { margin:20px 0 8px; font-size:12px; letter-spacing:1.4px; color:#006773; }
+#dn-title { font:600 clamp(24px,4vw,36px)/1.2 Switzer_semibold,Arial,sans-serif; margin:0 0 24px; }
+#dn-content h3 { font-size:17px; margin:20px 0 6px; }
+#dn-content p { text-transform:none; font:inherit; color:#475467; margin:0 0 12px; }
+.dn-comparison { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:24px; }
+.dn-comparison figure { margin:0; min-width:0; }
+.dn-comparison figcaption { font-weight:700; margin-bottom:8px; }
+.dn-comparison img { display:block; width:100%; height:auto; border:1px solid #d6e0e4; border-radius:8px; }
+html.dn-modal-open { overflow:hidden; }
+html.dn-modal-open .logo-track { animation-play-state:paused; }
+@media (max-width:600px) {
+ .dn-toolbar { align-items:stretch; flex-direction:column; text-align:center; }
+ .dn-dialog-inner { padding:20px; }
+ .dn-comparison { grid-template-columns:1fr; }
+}
+@media (prefers-reduced-motion:reduce) { #slider1 .logo-track { animation:none; } }

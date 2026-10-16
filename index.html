@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WFX | Landing page redesign concept</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
@@ -40,8 +40,15 @@
       </nav>
     </header>
 
+    <!-- Portfolio design notes: controls appear when JavaScript is available. -->
+    <aside class="dn-toolbar" aria-label="Portfolio design notes" hidden>
+      <span>Landing page redesign concept</span>
+      <button type="button" id="dn-toggle" aria-pressed="false">View design notes</button>
+      <button type="button" data-note="about">About this redesign / Before &amp; after</button>
+    </aside>
     <main>
       <section class="hero">
+<div class="dn-marker-row" hidden><button class="dn-marker" type="button" data-note="hero" aria-label="Design note 01: Hero introduction"><span>01</span> Hero introduction</button></div>
         <div class="hero-orbit orbit-one"></div>
         <div class="hero-orbit orbit-two"></div>
         <div class="shell-herosection">
@@ -59,6 +66,7 @@
           </div>
 
           <div class="demo-platform">
+<div class="dn-marker-row" hidden><button class="dn-marker" type="button" data-note="actions" aria-label="Design note 02: Two demo buttons"><span>02</span> Two demo buttons</button></div>
             <button class="demo">
               Book a demo <i class="ri-arrow-right-up-long-line"></i>
             </button>
@@ -87,6 +95,7 @@
       </section>
 
       <section class="trusted" id="slider1" aria-label="Trusted brands">
+<div class="dn-marker-row" hidden><button class="dn-marker" type="button" data-note="trust" aria-label="Design note 03: Customer recognition"><span>03</span> Customer recognition</button></div>
         <div class="trusted-boarder">
           <p class="trusted-heading">
             Trusted by leading fashion brands and manufacturers
@@ -157,6 +166,7 @@
       </section>
 
       <section class="Core">
+<div class="dn-marker-row" hidden><button class="dn-marker" type="button" data-note="products" aria-label="Design note 04: Product overview"><span>04</span> Product overview</button></div>
         <div class="platform_card_section">
           <p>Core platform</p>
           <h4>Full visibility from<br />concept to delivery.</h4>
@@ -262,6 +272,7 @@
       </section>
 
       <section class="why_Choose">
+<div class="dn-marker-row" hidden><button class="dn-marker" type="button" data-note="features" aria-label="Design note 05: Everyday features"><span>05</span> Everyday features</button></div>
         <div class="inner_elements">
           <div class="why_choose_heading">
             <p>Why Choose WFX</p>
@@ -392,6 +403,15 @@
       </section>
     </main>
 
+    <!-- Native dialog supports keyboard focus containment and Escape to close. -->
+    <dialog id="dn-dialog" aria-labelledby="dn-title">
+      <div class="dn-dialog-inner">
+        <button type="button" id="dn-close" aria-label="Close design note">Close ×</button>
+        <p class="dn-eyebrow">Behind the redesign</p>
+        <h2 id="dn-title"></h2>
+        <div id="dn-content"></div>
+      </div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
